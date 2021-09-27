@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/payment_2.css">
+</head>
+<body>
+    <div id="main">
+        
+        
+        <form onsubmit="payMoney(event)">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm-checkout-logo.png?65084" alt="" id="head-img">
+            <p>All transactions are secure and encrypted</p>
+            <div class="flex">
+                <div class="credit">CREDIT CARD</div>
+                <div>
+                    <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg" alt="">
+                    <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg" alt="">
+                    <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg" alt="">
+                    <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/payment_icons/discover-cc9808e50193c7496e7a5245eb86d5e06f02e2476c0fe70f2c40016707d35461.svg" alt="">
+                </div>
+            </div>
+            <hr style="width: 100%;">
+            <input type="text" placeholder="Card Number" id="cardno">
+            <input type="text" placeholder="Name on Card" id="cardname">
+            <input type="text" placeholder="Expiration Date (MM / YY)" id="expiry">
+            <input type="text" placeholder="Security Code" id="code">
+            <div id="submit-btn"><button >COMPLETE ORDER</button></div>
+            <div id="paypal"><button><img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/offsite-gateway-logos/paypal@2x-768388b0667bef1aa9a7cf02fa1cc2184c2915a90d4cdd62dde223f74f2acbfc.png" alt=""></button></div>
+        </form>
+    </div>
+
+</body>
+</html>
+<script src="js/form.js"></script>
