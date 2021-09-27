@@ -1,0 +1,55 @@
+/* Shop */
+#shop {
+    text-decoration: none;
+}
+
+#disappear {
+    width: 20px;
+    margin: auto;
+}
+
+.btn1 {
+    width: 20px;
+    margin: auto;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+#shop_hover {
+    width: 100%;
+    height: 460px;
+    display: none;
+    margin: auto;
+    grid-template-columns: 200px 50px 200px 200px 300px;
+    padding-left: 200px;
+    padding-top: 30px;
+    position: fixed;
+    top: 140px;
+    z-index: 2;
+    border-width: 1px 0 1px 0;
+    border-style: solid;
+    border-color: #EEEEEE;
+}
+
+#shop_hover a {
+    text-decoration: none;
+    color: rgba(18, 40, 76, 0.6);
+    font-weight: 300;
+    
+}
+
+#shop_hover a:hover {
+    color: #12284c;
+    font-weight: 400;
+    line-height: 14px;
+    size: 14px;
+  }
+
+.two {
+    width: 0%;
+    height: 410px;
+    border: .1px solid #E0E0E0;
+}

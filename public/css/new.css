@@ -1,0 +1,185 @@
+
+/* Full Body */
+body {
+    font-family: "Montserrat Light", sans-serif;
+    line-height: 1.65;
+}
+#new-start {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 50px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+}
+
+/* For Dropdown */
+.dropdown-container {
+    display: none;
+}
+
+.dropdown-container div button {
+    background: transparent;
+    border: none;
+    color: #8b8c8b;
+    font-size: 14px;
+}
+
+.dropdown-btn {
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-inside {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.plus {
+    font-size: 30px;
+    text-align: right;
+    color: #8b8c8b;
+}
+
+.btn-inside div:nth-child(1) {
+    text-align: left;
+}
+
+.above-smallest {
+    font-size: 14px;
+    color: #12284c;
+}
+
+.smallest {
+    font-size: 10px;
+    color: #8b8c8b;
+    padding-top: 4px;
+}
+
+#inbetween-dropdown {
+    font-size: 14px;
+    color: #12284c;
+    padding-left: 7px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* Right Side Part Above Products */
+
+#right-head {
+    display: flex;
+}
+#right-head div:nth-child(1) {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #12284c;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#right-head div label {
+    font-size: 14px;
+    color: #12284c;
+    margin-right: 10px;
+}
+#right-head div:nth-child(1) {
+    flex-grow: 3;
+}
+#right-head div:nth-child(2) {
+    margin-top: 10px;
+}
+option {
+    color: #8b8c8b;
+}
+select {
+    height: 30px;
+    color: #8b8c8b;
+    border: 1px solid #8b8c8b;
+}
+
+/* Products Part */
+
+#right-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+#right-body div {
+    text-align: center;
+}
+#right-body div img {
+    height: 200px;
+}
+#right-body div p {
+    width: 100%;
+}
+#right-body div p:nth-child(2) {
+    color: #12284c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 24px;
+}
+#right-body div p:nth-child(3), #right-body div p:nth-child(4) {
+    color: #8b8c8b;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.18px;
+    line-height: 20px;
+}
+
+/* For Footer */
+
+#foot {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    width: 90%;
+    margin: 25px auto;
+    grid-gap: 50px;
+    color: #7d7d7d;
+}
+
+#foot div button {
+    border: none;
+    background: transparent;
+}
+
+#foot div input {
+    background: transparent;
+    border: none;
+}
+
+#foot div:nth-child(n+1) p:nth-child(1) {
+    font-size: 14px;
+}
+
+#foot div:nth-child(n+1) p:nth-child(1)~p {
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+}
+
+#foot-first {
+    font-size: 14px;
+}
+
+#foot-first p:nth-child(1) {
+    font-size: 14px;
+    color: #12284c;
+}
+
+#foot-first div:nth-child(4) {
+    font-size: 14px;
+    margin: 10px 0px;
+    width: 80%;
+}
+
+.copyright {
+    font-size: 10px;
+}
