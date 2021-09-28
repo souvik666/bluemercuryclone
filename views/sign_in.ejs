@@ -1,145 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/header.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/form.css">
-  <link rel="stylesheet" href="css/header.css">
-</head>
-
-<body>
-
-  <!-- Header Starts Here -->
-  <header>
-    <div>
-      <div id="heading_first_row">
-        <div class="heading_one">
-          <div>
-            <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href="" target="_blank"></a>
+  <body>
+    <!-- Header Starts Here -->
+    <header>
+      <div>
+        <div id="heading_first_row">
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/927/927667.png"
+              /><a href="" target="_blank"></a>
+            </div>
+            <div>STORE & SPA LOCATOR</div>
           </div>
-          <div>STORE & SPA LOCATOR</div>
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg"
+              />
+            </div>
+            <div>WISHLIST</div>
+          </div>
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/622/622669.png"
+              />
+            </div>
+            <div>SEARCH</div>
+          </div>
+          <div id="click-log" class="heading_one">
+            <div>
+              <img
+                src="https://static.thenounproject.com/png/3144376-200.png"
+              />
+            </div>
+            <div>SIGN IN/UP</div>
+          </div>
+          <div class="heading_one" onclick="window.location.href = 'cart.html'">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/687/687259.png"
+              />
+            </div>
+            <div>BAG</div>
+          </div>
         </div>
-        <div class="heading_one">
-          <div>
-            <img src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
-          </div>
-          <div>WISHLIST</div>
+        <div class="heading_two">
+          <img
+            id="img-click"
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421"
+          />
         </div>
-        <div class="heading_one">
+        <div id="heading_second_row">
+          <div></div>
+          <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
           <div>
-            <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
+            <a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a>
           </div>
-          <div>SEARCH</div>
-        </div>
-        <div id="click-log" class="heading_one">
+          <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+          <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+          <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
           <div>
-            <img src="https://static.thenounproject.com/png/3144376-200.png" />
+            <a class="heading_a" href="" target="_blank">BLUEREWARDS</a>
           </div>
-          <div>SIGN IN/UP</div>
-        </div>
-        <div class="heading_one" onclick="window.location.href = 'cart.html'">
-          <div>
-            <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
-          </div>
-          <div>BAG</div>
+          <div></div>
         </div>
       </div>
-      <div class="heading_two"><img id="img-click"
-          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
-      </div>
-      <div id="heading_second_row">
-        <div></div>
-        <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
-        <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
-        <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
-        <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
-        <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
-        <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
-        <div></div>
-      </div>
-    </div>
-  </header>
-  <!-- Header Ends Here -->
-
-  <div id="bluewards"></div>
-
-  <form id="customer-login" class="Form">
-    <header class="Form_header">
-      <h1>LOGIN</h1>
-      <p>Please enter your e-mail and password:</p>
     </header>
+    <!-- Header Ends Here -->
 
-    <div class="Form_Box">
-      <input id="Email" type="email" class="Form_Ip" name="user_email" placeholder="Email">
-      <label class="Form_Invisible" for="user_email">Email</label>
-    </div>
+    <div id="bluewards"></div>
 
-    <div class="Form_Box" style="border: 1px solid #12284c; display: flex;">
-      <input id="Password" type="password" style="width: 330px; border: none;" class="Form_Ip" name="password"
-        placeholder="Password">
-      <button class="Help_btn" type="button" onclick="window.location.href='forgot_password.html'">Forgot
-        password?</button>
-    </div>
-    <label class="Form_Invisible" for="password">Password</label>
+    <form action="/login" method="post">
+      <input type="email" placeholder="email" name="email" />
+      <input type="password" placeholder="password" name="password" />
+      <input type="submit" value="Login" />
+    </form>
 
-    <a>
-      <button class="End_btn" onclick="loginUser(event)">LOGIN</button>
-    </a>
+    <!--     <form id="customer-login" class="Form">
+      <header class="Form_header">
+        <h1>LOGIN</h1>
+        <p>Please enter your e-mail and password:</p>
+      </header>
+      add your stye here
 
-    <div class="centre">
-      <span>Don't have an account?</span>
-      <a href="create_one.html">Create one</a>
-    </div>
+      <p><%=hook%></p>
+      <div class="centre">
+        <span>Don't have an account?</span>
+        <a href="create_one.html">Create one</a>
+      </div>
+    </form>
+  
+  //refer this for style
 
-  </form>
-  <hr />
-  <!-- Footer Start -->
-  <div id="foot">
-    <div id="foot-first">
-      <p>Get Expert Beauty Insight & Offers</p>
-      <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
-      <button onclick="mailSent()">&rarr;</button>
-      <div>To learn more about how we use your information and your rights, see Privacy Note</div>
-      <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
-    </div>
-    <div>
-      <p>BLUEMERCURY</p>
-      <p>Our Company</p>
-      <p>Store Locator</p>
-      <p>Spa Menu</p>
-      <p>Press</p>
-      <p>Careers</p>
-    </div>
-    <div>
-      <p>MY ACCOUNT</p>
-      <p>My Account</p>
-      <p>Blue Rewards</p>
-    </div>
-    <div>
-      <p>CUSTOMER SERVICE</p>
-      <p>Contact Us</p>
-      <p>Help & FAQ</p>
-      <p>Offers</p>
-      <p>Klarna</p>
-    </div>
-    <div>
-      <p>RESOURCES</p>
-      <p>Terms & Conditions</p>
-      <p>Privacy Policy</p>
-      <p>Accessibility</p>
-      <p>COVID-19 Updates</p>
-    </div>
-  </div>
-  <!-- Footer End -->
+  <div class="Form_Box">
+        <input
+          id="Email"
+          type="email"
+          class="Form_Ip"
+          name="user_email"
+          placeholder="Email"
+        />
+        <label class="Form_Invisible" for="user_email">Email</label>
+      </div>
 
-</body>
+      <div class="Form_Box" style="border: 1px solid #12284c; display: flex">
+        <input
+          id="Password"
+          type="password"
+          style="width: 330px; border: none"
+          class="Form_Ip"
+          name="password"
+          placeholder="Password"
+        />
+        <button
+          class="Help_btn"
+          type="button"
+          onclick="window.location.href='forgot_password.html'"
+        >
+          Forgot password?
+        </button>
+      </div>
+      <label class="Form_Invisible" for="password">Password</label>
 
+      <a>
+        <button class="End_btn" type="submit">LOGIN</button>
+      </a>
+  -->
+    <hr />
+    <!-- Footer Start -->
+    <div id="foot">
+      <div id="foot-first">
+        <p>Get Expert Beauty Insight & Offers</p>
+        <input type="email" name="" id="email" placeholder="EMAIL ADDRESS" />
+        <button onclick="mailSent()">&rarr;</button>
+        <div>
+          To learn more about how we use your information and your rights, see
+          Privacy Note
+        </div>
+        <div class="copyright">
+          Copyright 2021 bluemercury. All Rights Reserved.
+        </div>
+      </div>
+      <div>
+        <p>BLUEMERCURY</p>
+        <p>Our Company</p>
+        <p>Store Locator</p>
+        <p>Spa Menu</p>
+        <p>Press</p>
+        <p>Careers</p>
+      </div>
+      <div>
+        <p>MY ACCOUNT</p>
+        <p>My Account</p>
+        <p>Blue Rewards</p>
+      </div>
+      <div>
+        <p>CUSTOMER SERVICE</p>
+        <p>Contact Us</p>
+        <p>Help & FAQ</p>
+        <p>Offers</p>
+        <p>Klarna</p>
+      </div>
+      <div>
+        <p>RESOURCES</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Accessibility</p>
+        <p>COVID-19 Updates</p>
+      </div>
+    </div>
+    <!-- Footer End -->
+  </body>
 </html>
 <script src="js/form.js"></script>
 <script src="js/header.js"></script>
