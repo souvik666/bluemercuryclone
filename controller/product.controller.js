@@ -11,7 +11,9 @@ router.post("", async (req, res) => {
 
 router.get("", async (req, res) => {
     const items = await Products.find().lean().exec();
-    return res.send({items});
+    return res.render("new.ejs", {
+        items,
+    })
 })
 
 module.exports = router;
