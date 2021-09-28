@@ -235,7 +235,14 @@
             <hr/>
             <!-- Right Section Products -->
             <div id="right-body">
-
+                <% items.forEach(function (item) { %>
+                <div>
+                    <img src="<%= item.image %>" alt="">
+                    <p><%= item.brand %></p>
+                    <p><%= item.name %></p>
+                    <p><%= item.price %></p>
+                </div>
+                <% }) %>
             </div>
         </div>
     </div>
