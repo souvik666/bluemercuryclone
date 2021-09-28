@@ -1,198 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <style>
+      /* Hide expandable content by default */
+      .expandable {
+        visibility: collapse;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/form.css">
-  <link rel="stylesheet" href="css/header.css">
-  <style>
-    /* Hide expandable content by default */
-    .expandable {
-      visibility: collapse;
-    }
+      /* Show hidden content when the checkbox is checked */
+      #expand-toggle:checked ~ * .expandable {
+        visibility: visible;
+      }
+    </style>
+  </head>
 
-    /* Show hidden content when the checkbox is checked */
-    #expand-toggle:checked~* .expandable {
-      visibility: visible;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Header Starts Here -->
-  <header>
-    <div>
-      <div id="heading_first_row">
-        <div class="heading_one">
-          <div>
-            <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href="" target="_blank"></a>
-          </div>
-          <div>STORE & SPA LOCATOR</div>
-        </div>
-        <div class="heading_one">
-          <div>
-            <img src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
-          </div>
-          <div>WISHLIST</div>
-        </div>
-        <div class="heading_one">
-          <div>
-            <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
-          </div>
-          <div>SEARCH</div>
-        </div>
-        <div id="click-log" class="heading_one">
-          <div>
-            <img src="https://static.thenounproject.com/png/3144376-200.png" />
-          </div>
-          <div>SIGN IN/UP</div>
-        </div>
-        <div class="heading_one" onclick="window.location.href = 'cart.html'">
-          <div>
-            <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
-          </div>
-          <div>BAG</div>
-        </div>
-      </div>
-      <div class="heading_two"><img id="img-click"
-          src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
-      </div>
-      <div id="heading_second_row">
-        <div></div>
-        <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
-        <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
-        <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
-        <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
-        <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
-        <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
-        <div></div>
-      </div>
-    </div>
-  </header>
-  <!-- Header Ends Here -->
-
-  <div id="bluewards"></div>
-
-  <div>
-    <form id="create_customer" class="Form" onsubmit="bluemercuryUser(event)">
-      <header class="Form_header">
-        <h1>CREATE ACCOUNT</h1>
-        <p>Complete the form below to create a bluemercury.com account.</p>
-      </header>
-
-      <div class="Form_Box">
-        <input id="CreateAccountEmail" type="email" class="Form_Ip" name="customer[email]" aria-label="Email"
-          placeholder="Email*" required="required">
-        <label class="Form_Invisible">Email</label>
-      </div>
-      <div class="Form_Box">
-        <input id="CreateAccountFirstName" type="text" class="Form_Ip" name="customer[first_name]"
-          aria-label="First Name" placeholder="First Name*" required="required">
-        <label class="Form_Invisible">First Name</label>
-      </div>
-      <div class="Form_Box">
-        <input id="Creat_LastName" type="text" class="Form_Ip" name="last_name" placeholder="Last Name*"
-          required="required">
-        <label class="Form_Invisible">Last Name</label>
-      </div>
-      <div class="Form_Box">
-        <input id="Creat_Password" type="password" class="Form_Ip" name="password" placeholder="Password*"
-          required="required">
-        <label class="Form_Invisible">Password</label>
-      </div>
-
-      <p class="Note">*Indicates Required Field</p>
-      <div class="Offer_box">
-        <input id="expand-toggle" type="checkbox" />
-        <div class="logo_box">
-          <span class="Join">Join</span>
-          <span class="Rewards">
-            <span class="Blue">Blue</span>
-            Rewards
-          </span>
-        </div>
-
-        <div class="loyalty_info">
-          <span style="margin-top: 5px;">
-            Earn $10 for every $250 you spend, plus FREE birthday gifts &amp; treatments!
-          </span>
-        </div>
-
-      </div>
-
-
+  <body>
+    <!-- Header Starts Here -->
+    <header>
       <div>
-        <div class="centre" style="color: #666666;">
-          <p>To learn more about how we use your information and your rights, see
-            <a href="" style="color: #666666;">Privacy Note</a>
-          </p>
+        <div id="heading_first_row">
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/927/927667.png"
+              /><a href="" target="_blank"></a>
+            </div>
+            <div>STORE & SPA LOCATOR</div>
+          </div>
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg"
+              />
+            </div>
+            <div>WISHLIST</div>
+          </div>
+          <div class="heading_one">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/622/622669.png"
+              />
+            </div>
+            <div>SEARCH</div>
+          </div>
+          <div id="click-log" class="heading_one">
+            <div>
+              <img
+                src="https://static.thenounproject.com/png/3144376-200.png"
+              />
+            </div>
+            <div>SIGN IN/UP</div>
+          </div>
+          <div class="heading_one" onclick="window.location.href = 'cart.html'">
+            <div>
+              <img
+                src="https://image.flaticon.com/icons/png/128/687/687259.png"
+              />
+            </div>
+            <div>BAG</div>
+          </div>
+        </div>
+        <div class="heading_two">
+          <img
+            id="img-click"
+            src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421"
+          />
+        </div>
+        <div id="heading_second_row">
+          <div></div>
+          <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
+          <div>
+            <a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a>
+          </div>
+          <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+          <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+          <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
+          <div>
+            <a class="heading_a" href="" target="_blank">BLUEREWARDS</a>
+          </div>
+          <div></div>
         </div>
       </div>
+    </header>
+    <!-- Header Ends Here -->
 
-      <button class="End_btn" onclick="bluemercuryUser(event)">
-        <span class="" style="width: 300px;">Create account</span>
-      </button>
+    <div id="bluewards"></div>
 
-      <div class="centre">
-        <span>Already have a bluemercury.com account?</span>
-        <a href="sign_in.html">Sign In</a>
+    <div>
+      <!-- onsubmit="bluemercuryUser(event) -->
+      <form id="create_customer" class="Form" action="/signup" method="post">
+        <header class="Form_header">
+          <h1>CREATE ACCOUNT</h1>
+          <p>Complete the form below to create a bluemercury.com account.</p>
+        </header>
+
+        <div class="Form_Box">
+          <input
+            id="CreateAccountEmail"
+            type="email"
+            class="Form_Ip"
+            name="email"
+            aria-label="Email"
+            placeholder="Email*"
+            required="required"
+          />
+          <label class="Form_Invisible">Email</label>
+        </div>
+        <div class="Form_Box">
+          <input
+            id="CreateAccountFirstName"
+            type="text"
+            class="Form_Ip"
+            name="username"
+            aria-label="First Name"
+            placeholder="First Name*"
+            required="required"
+          />
+          <label class="Form_Invisible">First Name</label>
+        </div>
+        <div class="Form_Box">
+          <input
+            id="Creat_LastName"
+            type="text"
+            class="Form_Ip"
+            name="last_name"
+            placeholder="Last Name*"
+            required="required"
+          />
+          <label class="Form_Invisible">Last Name</label>
+        </div>
+        <div class="Form_Box">
+          <input
+            id="Creat_Password"
+            type="password"
+            class="Form_Ip"
+            name="password"
+            placeholder="Password*"
+            required="required"
+          />
+          <label class="Form_Invisible">Password</label>
+        </div>
+
+        <p class="Note">*Indicates Required Field</p>
+        <div class="Offer_box">
+          <input id="expand-toggle" type="checkbox" />
+          <div class="logo_box">
+            <span class="Join">Join</span>
+            <span class="Rewards">
+              <span class="Blue">Blue</span>
+              Rewards
+            </span>
+          </div>
+
+          <div class="loyalty_info">
+            <span style="margin-top: 5px">
+              Earn $10 for every $250 you spend, plus FREE birthday gifts &amp;
+              treatments!
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <div class="centre" style="color: #666666">
+            <p>
+              To learn more about how we use your information and your rights,
+              see
+              <a href="" style="color: #666666">Privacy Note</a>
+            </p>
+          </div>
+        </div>
+
+        <input type="submit" class="End_btn" value="create account" />
+        <!-- <span class="" style="width: 300px">Create account</span> -->
+
+        <div class="centre">
+          <span>Already have a bluemercury.com account?</span>
+          <a href="sign_in.html">Sign In</a>
+        </div>
+      </form>
+    </div>
+
+    <hr />
+
+    <!-- Footer Start -->
+    <div id="foot">
+      <div id="foot-first">
+        <p>Get Expert Beauty Insight & Offers</p>
+        <input type="email" name="" id="email" placeholder="EMAIL ADDRESS" />
+        <button onclick="mailSent()">&rarr;</button>
+        <div>
+          To learn more about how we use your information and your rights, see
+          Privacy Note
+        </div>
+        <div class="copyright">
+          Copyright 2021 bluemercury. All Rights Reserved.
+        </div>
       </div>
-
-    </form>
-  </div>
-
-  <hr />
-
-  <!-- Footer Start -->
-  <div id="foot">
-    <div id="foot-first">
-      <p>Get Expert Beauty Insight & Offers</p>
-      <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
-      <button onclick="mailSent()">&rarr;</button>
-      <div>To learn more about how we use your information and your rights, see Privacy Note</div>
-      <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
+      <div>
+        <p>BLUEMERCURY</p>
+        <p>Our Company</p>
+        <p>Store Locator</p>
+        <p>Spa Menu</p>
+        <p>Press</p>
+        <p>Careers</p>
+      </div>
+      <div>
+        <p>MY ACCOUNT</p>
+        <p>My Account</p>
+        <p>Blue Rewards</p>
+      </div>
+      <div>
+        <p>CUSTOMER SERVICE</p>
+        <p>Contact Us</p>
+        <p>Help & FAQ</p>
+        <p>Offers</p>
+        <p>Klarna</p>
+      </div>
+      <div>
+        <p>RESOURCES</p>
+        <p>Terms & Conditions</p>
+        <p>Privacy Policy</p>
+        <p>Accessibility</p>
+        <p>COVID-19 Updates</p>
+      </div>
     </div>
-    <div>
-      <p>BLUEMERCURY</p>
-      <p>Our Company</p>
-      <p>Store Locator</p>
-      <p>Spa Menu</p>
-      <p>Press</p>
-      <p>Careers</p>
-    </div>
-    <div>
-      <p>MY ACCOUNT</p>
-      <p>My Account</p>
-      <p>Blue Rewards</p>
-    </div>
-    <div>
-      <p>CUSTOMER SERVICE</p>
-      <p>Contact Us</p>
-      <p>Help & FAQ</p>
-      <p>Offers</p>
-      <p>Klarna</p>
-    </div>
-    <div>
-      <p>RESOURCES</p>
-      <p>Terms & Conditions</p>
-      <p>Privacy Policy</p>
-      <p>Accessibility</p>
-      <p>COVID-19 Updates</p>
-    </div>
-  </div>
-  <!-- Footer End -->
-
-
-
-</body>
-
+    <!-- Footer End -->
+  </body>
 </html>
 <script src="js/form.js"></script>
 <script src="js/header.js"></script>

@@ -1,0 +1,8 @@
+{
+  _id: new ObjectId("6152b306261ab5b120ed5202"),
+  username: 'souvik',
+  email: 'abc@gmail.com',
+  password: '12345',
+  cart: [],
+  __v: 0
+}
