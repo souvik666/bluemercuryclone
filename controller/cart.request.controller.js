@@ -15,7 +15,6 @@ const counter = async (arr) => {
   return map;
 };
 
-const watchDog = (arr, n) => {};
 
 /* add to cart request by client */
 router.get("/:userID/:productID", async (req, res) => {
