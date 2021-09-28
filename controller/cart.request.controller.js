@@ -10,7 +10,7 @@ router.get("/:userID/:productID", async (req, res) => {
   const findPro = await myClients.find({
     $and: [{ _id: whoami }, { cart: product_id }],
   });
-
+//few logic left/*  */
   /*  const myUsrs = await myClients.findByIdAndUpdate(whoami, {
     $push: { cart: product_id },
   }); */
