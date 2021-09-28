@@ -22,7 +22,6 @@ router.get("/:userID/:productID", async (req, res) => {
   const whoami = req.params.userID; //user ID
   const product_id = req.params.productID;
 
-  /*  see if already exsited product*/
   const findPro = await myClients.findByIdAndUpdate(whoami, {
     $push: { cart: product_id },
   });
@@ -30,7 +29,7 @@ router.get("/:userID/:productID", async (req, res) => {
   for (let i in newCart) {
     cart.push(Object.keys(newCart[i]).toString());
   }
-  console.log(cart.length);
+  /*  see if already exsited product*/
   let countedData = await counter(cart);
   await myClients.findByIdAndUpdate(whoami, {
     newCart: countedData,
