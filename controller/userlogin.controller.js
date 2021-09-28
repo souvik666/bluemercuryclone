@@ -4,7 +4,6 @@ const users = require("../models/user.model");
 const { LocalStorage } = require("node-localstorage");
 var localStorage = new LocalStorage("./scratch");
 
-const hook = false;
 /* make a login request */
 router.post("/", async (req, res) => {
   const email = req.body.email;
@@ -21,9 +20,7 @@ router.post("/", async (req, res) => {
 
 /* render my login page */
 router.get("/", async (req, res) => {
-  res.render("sign_in", {
-    hook,
-  });
+  res.render("sign_in", {});
 });
 
 module.exports = router;
