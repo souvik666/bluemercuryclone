@@ -6,10 +6,8 @@ const userSchema = mongoose.Schema({
   email: { type: "string", require: true },
   password: { type: "string", require: true },
   last_name: { type: "string", require: true },
-  cart: [
-    { type: mongoose.Schema.Types.ObjectId, ref: "cartData" },
-    { count: { type: "string", require: false } },
-  ],
+  cart: [{ type: mongoose.Schema.Types.ObjectId, ref: "cartData" }],
+  newCart: [],
 });
 
 const user = mongoose.model("user", userSchema);
