@@ -118,42 +118,6 @@ for (i = 0; i < dropdown.length; i++) {
     });
 }
 
-// Adding Products in HTML
-let accessing = localStorage.getItem("bluemercuryProducts");
-let productData = JSON.parse(accessing);
-let z = 0;
-
-function addData() {
-    let mainDiv = document.getElementById("right-body");
-
-    productData.forEach(function (product) {
-        let div = document.createElement("div");
-        div.setAttribute("id", `a${z}`);
-        z++;
-
-        let image = document.createElement("img");
-        image.src = product.image;
-
-        let p1 = document.createElement("p");
-        p1.innerText = product.brand;
-
-        let p2 = document.createElement("p");
-        p2.innerText = product.name;
-
-        let price = `$${product.price}`
-        let p3 = document.createElement("p");
-        p3.innerText = price;
-
-        div.append(image, p1, p2, p3);
-        div.onclick = function () {
-            addClickData(product)
-        };
-        mainDiv.append(div);
-        
-    })
-}
-addData();
-
 // For Brand 1 Sorting
 function kiehl() {
     let access = localStorage.getItem("bluemercuryProducts");
