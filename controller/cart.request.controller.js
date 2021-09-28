@@ -9,39 +9,33 @@ const counter = async (arr) => {
   let tmp;
   for (let i in arr) {
     tmp = arr[i];
-    map[tmp] = map[tmp] || 0;
+    map[tmp] = map[tmp] || 1;
     map[tmp]++;
   }
   return map;
 };
+
+const watchDog = (arr, n) => {};
+
 /* add to cart request by client */
 router.get("/:userID/:productID", async (req, res) => {
   const whoami = req.params.userID; //user ID
   const product_id = req.params.productID;
-  //see if already exsited product
-  /*   {
+
+  /*  see if already exsited product*/
+  const findPro = await myClients.findByIdAndUpdate(whoami, {
     $push: { cart: product_id },
-  } */
-  const findPro = await myClients.findOne({
-    $and: [{ _id: whoami }, { cart: product_id }],
   });
-  let { cart } = findPro;
-  cart.push(product_id);
-  let newCart = await counter(cart);
-  console.log(newCart);
-  if (findPro) {
-    await myClients.findByIdAndUpdate(
-      whoami,
-      [{ $set: { newcart: [newCart] } }],
-      {
-        new: true,
-      }
-    );
-    await myClients.findByIdAndUpdate(whoami, [{ $set: { cart: [] } }], {
-      new: true,
-    });
+  let { cart, newCart } = findPro;
+  for (let i in newCart) {
+    cart.push(Object.keys(newCart[i]).toString());
   }
-  res.send(await myClients.find());
+  console.log(cart.length);
+  let countedData = await counter(cart);
+  await myClients.findByIdAndUpdate(whoami, {
+    newCart: countedData,
+  });
+  res.send(findPro);
 });
 
 module.exports = router;
