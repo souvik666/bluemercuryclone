@@ -1,11 +1,15 @@
 const mongoose = require("mongoose");
+const cartData = require("../models/product.model");
 
 const userSchema = mongoose.Schema({
   username: { type: "string", require: true },
   email: { type: "string", require: true },
   password: { type: "string", require: true },
   last_name: { type: "string", require: true },
-  cart: [],
+  cart: [
+    { type: mongoose.Schema.Types.ObjectId, ref: "cartData" },
+    { count: { type: "string", require: false } },
+  ],
 });
 
 const user = mongoose.model("user", userSchema);
