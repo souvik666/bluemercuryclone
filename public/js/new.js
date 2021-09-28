@@ -95,11 +95,11 @@ function sorting(a) {
     if (a === "ltoh") {
        lowToHigh();
     } else if (a === "htol") {
-        highToLow();
-    } else if (a === "newarrivals") {
-        document.getElementById("right-body").innerHTML = null;
-        addData();
-    }
+        highToLow();}
+    // } else if (a === "newarrivals") {
+    //     document.getElementById("right-body").innerHTML = null;
+    //     addData();
+    // }
 }
 
 // Function for Dropdown
