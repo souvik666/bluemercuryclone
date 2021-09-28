@@ -11,7 +11,7 @@ app.use(express.urlencoded());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-app.use("/user", userController);
+app.use("/signup", userController);
 app.use("/login", loginController);
 app.listen(2345, async (req, res) => {
   await connect();
