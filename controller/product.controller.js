@@ -3,6 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 const Products = require("../models/product.model");
+const { LocalStorage } = require("node-localstorage");
+var localStorage = new LocalStorage("./scratch");
 // const user = require("../models/user.model");
 
 let items;
