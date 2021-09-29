@@ -15,7 +15,6 @@ router.get("", async (req, res) => {
 })
 
 // Router for Brand Names
-
 router.get("/kiehl", async (req, res) => {
     items = await Products.find({brand: "KIEHL'S SINCE 1851"}).lean().exec();
     return res.render("new.ejs", {
@@ -82,7 +81,6 @@ router.get("/haircare", async (req, res) => {
 })
 
 // Routers for price
-
 router.get("/low", async (req, res) => {
     items = await Products.find().sort({ price: 1 }).lean().exec();
     return res.render("new.ejs", {
