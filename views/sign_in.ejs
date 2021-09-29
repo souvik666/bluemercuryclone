@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/login.css">
   </head>
 
   <body>
@@ -19,61 +20,19 @@
     <!-- Header -->
 
     <div id="bluewards"></div>
-
-    <form action="/login" method="post">
-      <input type="email" placeholder="email" name="email" />
-      <input type="password" placeholder="password" name="password" />
-      <input type="submit" value="Login" />
-    </form>
-
-    <!--     <form id="customer-login" class="Form">
-      <header class="Form_header">
-        <h1>LOGIN</h1>
-        <p>Please enter your e-mail and password:</p>
-      </header>
-      add your stye here
-      <div class="centre">
-        <span>Don't have an account?</span>
-        <a href="create_one.html">Create one</a>
+    <div id="new-main">
+      <div>LOGIN</div>
+      <div>Please enter your e-mail and password</div>
+      <div>
+        <form action="/login" method="post" id="new-login">
+          <div><input type="email" placeholder="Email" name="email" /></div>
+          <div><input type="password" placeholder="Password" name="password" /></div>
+          <div><input type="submit" value="LOGIN" /></div>
+        </form>
       </div>
-    </form>
-  
-  //refer this for style
-
-  <div class="Form_Box">
-        <input
-          id="Email"
-          type="email"
-          class="Form_Ip"
-          name="user_email"
-          placeholder="Email"
-        />
-        <label class="Form_Invisible" for="user_email">Email</label>
-      </div>
-
-      <div class="Form_Box" style="border: 1px solid #12284c; display: flex">
-        <input
-          id="Password"
-          type="password"
-          style="width: 330px; border: none"
-          class="Form_Ip"
-          name="password"
-          placeholder="Password"
-        />
-        <button
-          class="Help_btn"
-          type="button"
-          onclick="window.location.href='forgot_password.html'"
-        >
-          Forgot password?
-        </button>
-      </div>
-      <label class="Form_Invisible" for="password">Password</label>
-
-      <a>
-        <button class="End_btn" type="submit">LOGIN</button>
-      </a>
-  -->
+      <div>Don't have an account? <a href="">Create one</a></div>
+    </div>
+    
     <hr />
     <!-- Footer -->
     <%- include("./partials/footer.ejs") %>
