@@ -4,6 +4,10 @@ const users = require("../models/user.model");
 const { LocalStorage } = require("node-localstorage");
 var localStorage = new LocalStorage("./scratch");
 
+router.get("", async (req, res) => {
+  return res.render("sign_in.ejs")
+})
+
 /* make a login request */
 router.post("/", async (req, res) => {
   const email = req.body.email;

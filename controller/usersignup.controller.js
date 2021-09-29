@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 const userSchema = require("../models/user.model");
 
-router.get("/", async (req, res) => {
-  res.render("create_one", {});
+router.get("", async (req, res) => {
+  res.render("create_one");
 });
 
 /* create a user */

@@ -3,6 +3,11 @@ const router = express.Router();
 const products = require("../models/product.model");
 const myClients = require("../models/user.model");
 
+router.get("", async (req, res) => {
+  return res.render("cart.ejs");
+})
+
+
 /* check if the product already exsit */
 const counter = async (arr) => {
   let map = {};
