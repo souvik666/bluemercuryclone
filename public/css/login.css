@@ -1,0 +1,43 @@
+#new-main {
+    text-align: center;
+    width: 60%;
+    margin: 125px auto;
+}
+
+#new-login > div > input {
+    width: 50%;
+    height: 40px;
+    margin: 15px;
+}
+
+#new-login > div > input::placeholder {
+    padding-left: 20px;;
+}
+
+#new-login > div:nth-child(3) > input {
+    background-color: #12284c;
+    width: 51%;
+    color: white;
+    margin-top: 20px;
+}
+
+#new-main > div:nth-child(1) {
+    font-size: 32px;
+    color: #12284c;
+    font-weight: 700;
+    margin: 20px;
+}
+
+#new-main > div:nth-child(2) {
+    font-size: 16px;
+    color: #12284c;
+    font-weight: 400;
+    margin: 10px;
+}
+
+#new-main > div:nth-child(4) {
+    font-size: 13px;
+    color: #12284c;
+    font-weight: 400;
+    /* margin: 10px; */
+}
