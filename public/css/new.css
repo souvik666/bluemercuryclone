@@ -19,6 +19,11 @@ body {
     display: none;
 }
 
+.dropdown-container > div > button > a {
+    text-decoration: none;
+    color: #8b8c8b;
+}
+
 .dropdown-container div button {
     background: transparent;
     border: none;

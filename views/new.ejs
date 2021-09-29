@@ -1,16 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="css/new.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/shop.css">
-    <!-- <base href="/">     -->
-=======
     <link rel="stylesheet" href="/css/new.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/shop.css">    
->>>>>>> 3580ba9540ca0491077e207af08f41ab4bb8cf2e
 </head>
 
 <body>
@@ -139,10 +137,10 @@
                 <hr>
             </button>
             <div class="dropdown-container">
-                <div><button>Makeup New Arrivals</button></div>
-                <div><button>Skin Care New Arrivals</button></div>
-                <div><button>Hair New Arrivals</button></div>
-                <div><button>Men's New Arrivals</button></div>
+                <div><button><a href="/product/makeup">Makeup New Arrivals</a></button></div>
+                <div><button><a href="/product/skincare">Skin Care New Arrivals</a></button></div>
+                <div><button><a href="/product/haircare">Hair Care New Arrivals</a></button></div>
+                <div><button><a href="/product/facecare">Face Care New Arrivals</a></button></div>
                 <div><button>Sun Care New Arrivals</button></div>
             </div>
             <p id="inbetween-dropdown">FILTER PRODUCTS BY</p>
@@ -177,11 +175,11 @@
                 <hr>
             </button>
             <div class="dropdown-container">
-                <div><button onclick="kiehl()">Kiehl's Since 1851</button></div>
-                <div><button onclick="bumble()">Bumble And Bumble</button></div>
-                <div><button onclick="tom()">Tom Ford</button></div>
-                <div><button onclick="chan()">Chantecaille</button></div>
-                <div><button onclick="skin()">111SKIN</button></div>
+                <div><button><a href="/product/kiehl">Kiehl's Since 1851</a></button></div>
+                <div><button><a href="/product/bumble">Bumble And Bumble</a></button></div>
+                <div><button><a href="/product/tom">Tom Ford</a></button></div>
+                <div><button><a href="/product/chantec">Chantecaille</a></button></div>
+                <div><button><a href="/product/111skin">111SKIN</a></button></div>
             </div>
             <!-- Shop By Dropdown -->
             <button class="dropdown-btn">
@@ -225,12 +223,11 @@
                 <div>NEW ARRIVALS</div>
                 <div>
                     <label for="sort">SORT BY</label>
-
-                    <select name="sort" id="sort" onchange="sorting(this.value)">
-                        <option value="newarrivals" id="newArrivals">New Arrivals</option>
-                        <option value="bestseller" id="bestSeller">Best Sellers</option>
-                        <option value="ltoh" id="lToH">Price, Low To High</option>
-                        <option value="htol" id="hToL">Price, High To Low</option>
+                    <select name="sort" id="sort" onchange="location = this.options[this.selectedIndex].value;">
+                        <option value="/product/new" id="newArrivals">New Arrivals</option>
+                        <option value="/product/bestseller" id="bestSeller">Best Sellers</option>
+                        <option value="/product/low" id="lToH">Price, Low To High</option>
+                        <option value="/product/high" id="hToL">Price, High To Low</option>
                     </select>
                 </div>
             </div>
@@ -242,7 +239,7 @@
                     <img src="<%= item.image %>" alt="">
                     <p><%= item.brand %></p>
                     <p><%= item.name %></p>
-                    <p><%= item.price %></p>
+                    <p>$<%= item.price %></p>
                 </div>
                 <% }) %>
             </div>
@@ -294,4 +291,3 @@
 <script src="/js/new.js"></script>
 <script src="/js/header.js"></script>
 <script src="/js/shop.js"></script>
-
