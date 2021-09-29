@@ -128,7 +128,7 @@
             <!-- Right Section Products -->
             <form id="right-body">
                 <% items.forEach(function (item) { %>
-                <div>
+                <div onclick="window.location.href = 'productdetails/<%= item._id %>'">
                     <img src="<%= item.image %>" alt="">
                     <p><%= item.brand %></p>
                     <p><%= item.name %></p>
