@@ -1,119 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include("./partials/head.ejs", {title: "Cart"}) %>
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/shop.css">
     <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
-    <!-- Header Starts Here -->
-    <header>
-        <div>
-            <div id="heading_first_row">
-                <div class="heading_one">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
-                            target="_blank"></a>
-                    </div>
-                    <div>STORE & SPA LOCATOR</div>
-                </div>
-                <div class="heading_one">
-                    <div>
-                        <img
-                            src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
-                    </div>
-                    <div>WISHLIST</div>
-                </div>
-                <div class="heading_one">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
-                    </div>
-                    <div>SEARCH</div>
-                </div>
-                <div id="click-log" class="heading_one">
-                    <div>
-                        <img
-                            src="https://static.thenounproject.com/png/3144376-200.png" />
-                    </div>
-                    <div>SIGN IN/UP</div>
-                </div>
-                <div class="heading_one">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
-                    </div>
-                    <div>BAG</div>
-                </div>
-            </div>
-            <div class="heading_two"><img id="img-click"
-                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
-            </div>
-            <div id="heading_second_row">
-                <div></div>
-                <div class="btn1"><button id="disappear"><a id="shop" class="heading_a">SHOP</a></button></div>
-                <div><a class="heading_a" id="go-to-new">NEW!</a></div>
-                <div><a class="heading_a">BRANDS</a></div>
-                <div><a class="heading_a">EXPLORE</a></div>
-                <div><a class="heading_a">EVENTS</a></div>
-                <div><a class="heading_a">BLUEREWARDS</a></div>
-                <div></div>
-            </div>
-
-            <!-- Hover Start -->
-            <div id="shop_hover">
-                <div id="first" class="one">
-                    <p><a href="">SKIN CARE</a></p>
-                    <p><a href="">MAKEUP</a></p>
-                    <p><a href="">BATH AND BODY</a></p>
-                    <p><a href="">HAIR</a></p>
-                    <p><a href="">SUN AND TAN</a></p>
-                    <P><a href="">SCENTS & HOME</a></P>
-                    <P><a href="">MEN</a></P>
-                    <P><a href="">GIFTS</a></P>
-                </div>
-                <div id="second" class="two"></div>
-                <div id="third" class="one">
-                    <P>BY CATEGORY</P>
-                    <P><a href="">Shop All</a></P>
-                    <P><a href="">Cleaners</a></P>
-                    <p><a href="">Eye Care</a></p>
-                    <p><a href="">Masks</a></p>
-                    <p><a href="">Sets</a></p>
-                    <p><a href="">Sun Care</a></p>
-                    <p><a href="">Tools & Accessories</a></p>
-                </div>
-                <div id="fourth" class="one">
-                    <p>FEATURED</p>
-                    <p><a href="">Best Seller</a></p>
-                    <p><a href="new.html">New Arrivals</a></p>
-                    <p><a href="">Anti-Aging</a></p>
-                    <p><a href="">Antioxidants</a></p>
-                    <p><a href="">Skincare Tools</a></p>
-                    <p><a href="">Supplements</a></p>
-                    <p><a href="">Travel Size</a></p>
-                    <p><a href="">Vitamin C</a></p>
-                </div>
-                <div id="fifth" class="one">
-                    <div>
-                        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/cooling_eye_gel_nav_114x114.jpg?v=1626722614" alt="">
-                        <p><a href="">M-61</a></p>
-                        <p><a href="">Hydraboosyt Cooling Eye Gel</a></p>
-                        <br/>
-                    </div>
-                    <div>
-                        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/kiehl_s_nav_feature_114x114.jpg?v=1629317112" alt="">
-                        <p><a href="">Kiehl's</a></p>
-                        <spanp><a href="">Retinol daily Microdose Serum</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Hover Ends -->
-        </div>
-    </header>
-    <!-- Header Ends Here -->
+    <!-- Header -->
+    <%- include("./partials/header.ejs") %>
+    <!-- Header -->
 
     <div id="bluewards"></div>
 
@@ -149,44 +45,10 @@
 
 
     <hr>
-    <!-- Footer Start -->
-    <div id="foot">
-        <div id="foot-first">
-            <p>Get Expert Beauty Insight & Offers</p>
-            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
-            <button onclick="mailSent()">&rarr;</button>
-            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
-            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
-        </div>
-        <div>
-            <p>BLUEMERCURY</p>
-            <p>Our Company</p>
-            <p>Store Locator</p>
-            <p>Spa Menu</p>
-            <p>Press</p>
-            <p>Careers</p>
-        </div>
-        <div>
-            <p>MY ACCOUNT</p>
-            <p>My Account</p>
-            <p>Blue Rewards</p>
-        </div>
-        <div>
-            <p>CUSTOMER SERVICE</p>
-            <p>Contact Us</p>
-            <p>Help & FAQ</p>
-            <p>Offers</p>
-            <p>Klarna</p>
-        </div>
-        <div>
-            <p>RESOURCES</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Accessibility</p>
-            <p>COVID-19 Updates</p>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+    <!-- Footer -->
+    
 </body>
 </html>
 <script src="js/cart.js"></script>
