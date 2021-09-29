@@ -196,19 +196,19 @@ function applyPromo() {
 
 // Payment PAge Form
 
-function nextPage(event) {
-    event.preventDefault();
-    let email = document.getElementById("Email").value.trim();
-    let fname = document.getElementById("Payment_username").value.trim();
-    let lname = document.getElementById("Payment_lastname").value.trim();
-    let add1 = document.getElementById("Payment_address").value.trim();
+// function nextPage(event) {
+//     event.preventDefault();
+//     let email = document.getElementById("Email").value.trim();
+//     let fname = document.getElementById("Payment_username").value.trim();
+//     let lname = document.getElementById("Payment_lastname").value.trim();
+//     let add1 = document.getElementById("Payment_address").value.trim();
 
-    if (email.length < 1 || fname.length < 1 || lname.length < 1 || add1.length < 1) {
-        alert("Enter Valid Details!");
-    } else {
-        window.location.href = "payment_2.html";
-    }   
-}
+//     if (email.length < 1 || fname.length < 1 || lname.length < 1 || add1.length < 1) {
+//         alert("Enter Valid Details!");
+//     } else {
+//         window.location.href = "payment_2.html";
+//     }   
+// }
 
 // JS for Last PAyment Page
 
