@@ -126,7 +126,7 @@
             </div>
             <hr/>
             <!-- Right Section Products -->
-            <div id="right-body">
+            <form id="right-body">
                 <% items.forEach(function (item) { %>
                 <div>
                     <img src="<%= item.image %>" alt="">
@@ -135,7 +135,7 @@
                     <p>$<%= item.price %></p>
                 </div>
                 <% }) %>
-            </div>
+            </form>
         </div>
     </div>
     <hr/>
