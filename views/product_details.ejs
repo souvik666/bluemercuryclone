@@ -2,127 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details</title>
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/product_details.css">
-    <link rel="stylesheet" href="css/shop.css">
+    <%- include("./partials/head.ejs", {title: "Product Details"}) %>
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/product_details.css">
+    <link rel="stylesheet" href="/css/shop.css">
 </head>
 
 <body onload="slideShow()">
 
-    <!-- Header Starts Here -->
-    <header>
-        <div>
-            <div id="heading_first_row">
-                <div class="heading_one">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
-                            target="_blank"></a>
-                    </div>
-                    <div>STORE & SPA LOCATOR</div>
-                </div>
-                <div class="heading_one">
-                    <div>
-                        <img
-                            src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
-                    </div>
-                    <div>WISHLIST</div>
-                </div>
-                <div class="heading_one">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
-                    </div>
-                    <div>SEARCH</div>
-                </div>
-                <div id="click-log" class="heading_one">
-                    <div>
-                        <img src="https://static.thenounproject.com/png/3144376-200.png" />
-                    </div>
-                    <div>SIGN IN/UP</div>
-                </div>
-                <div class="heading_one" onclick="window.location.href = 'cart.html'">
-                    <div>
-                        <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
-                    </div>
-                    <div>BAG</div>
-                </div>
-            </div>
-            <div class="heading_two"><img id="img-click"
-                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
-            </div>
-            <div id="heading_second_row">
-                <div></div>
-                <div><a class="heading_a" href="" target="_blank">SHOP</a></div>
-                <div><a class="heading_a" href="" target="_blank" id="go-to-new">NEW!</a></div>
-                <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
-                <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
-                <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
-                <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
-                <div></div>
-            </div>
-            <!-- Hover Start -->
-            <div id="shop_hover">
-                <div id="first" class="one">
-                    <p><a href="">SKIN CARE</a></p>
-                    <p><a href="">MAKEUP</a></p>
-                    <p><a href="">BATH AND BODY</a></p>
-                    <p><a href="">HAIR</a></p>
-                    <p><a href="">SUN AND TAN</a></p>
-                    <P><a href="">SCENTS & HOME</a></P>
-                    <P><a href="">MEN</a></P>
-                    <P><a href="">GIFTS</a></P>
-                </div>
-                <div id="second" class="two"></div>
-                <div id="third" class="one">
-                    <P>BY CATEGORY</P>
-                    <P><a href="">Shop All</a></P>
-                    <P><a href="">Cleaners</a></P>
-                    <p><a href="">Eye Care</a></p>
-                    <p><a href="">Masks</a></p>
-                    <p><a href="">Sets</a></p>
-                    <p><a href="">Sun Care</a></p>
-                    <p><a href="">Tools & Accessories</a></p>
-                </div>
-                <div id="fourth" class="one">
-                    <p>FEATURED</p>
-                    <p><a href="">Best Seller</a></p>
-                    <p><a href="new.html">New Arrivals</a></p>
-                    <p><a href="">Anti-Aging</a></p>
-                    <p><a href="">Antioxidants</a></p>
-                    <p><a href="">Skincare Tools</a></p>
-                    <p><a href="">Supplements</a></p>
-                    <p><a href="">Travel Size</a></p>
-                    <p><a href="">Vitamin C</a></p>
-                </div>
-                <div id="fifth" class="one">
-                    <div>
-                        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/cooling_eye_gel_nav_114x114.jpg?v=1626722614" alt="">
-                        <p><a href="">M-61</a></p>
-                        <p><a href="">Hydraboosyt Cooling Eye Gel</a></p>
-                        <br/>
-                    </div>
-                    <div>
-                        <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/kiehl_s_nav_feature_114x114.jpg?v=1629317112" alt="">
-                        <p><a href="">Kiehl's</a></p>
-                        <spanp><a href="">Retinol daily Microdose Serum</a></span>
-                    </div>
-                </div>
-            </div>
-            <!-- Hover Ends -->
-        </div>
-    </header>
-    <!-- Header Ends Here -->
-
+    <!-- Header -->
+    <%- include("./partials/header.ejs") %>
+    <!-- Header -->
     <div id="bluewards"></div>
 
     <div class="one">
         <div class="one_1">
-            <div class="one_1_1">
+            <!-- <div class="one_1_1">
                 <a href="#"><img
-                        src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_100x.jpg?v=1629489864"></a>
+                        src="<%= findPro.image %>"></a>
                 <a href="#"><img
                         src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-2_100x.jpg?v=1629489864"></a>
                 <a href="#"><img
@@ -133,22 +30,21 @@
                         src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-5_100x.jpg?v=1629489865"></a>
                 <a href="#"><img
                         src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-6_100x.jpg?v=1629489865"></a>
-            </div>
+            </div> -->
             <div></div>
             <div>
                 <img style="height: 100%;"
-                    src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-3605972610010-1_525x525.jpg?v=1629489864">
+                    src="<%= findPro.image %>">
             </div>
             <div></div>
         </div>
         <div class="one_2">
-            <div>KIEHL'S SINCE 1851</div>
-            <div>Micro-Dose Anti-Aging Retinol Serum with Ceramides and Peptide</div>
+            <div><%= findPro.brand %></div>
+            <div><%= findPro.name %></div>
             <div>
-                <div>$60 ☆☆☆☆☆ (0)</div>
+                <div>$<%= findPro.price %> ☆☆☆☆☆ (0)</div>
             </div>
-            <div>A potent retinol serum in a daily-strength micro-dose that visibly reduces wrinkles, firms skin, evens
-                skin tone, and smoothes texture with minimal discomfort. <a href="#" style="color: #12284c;"> See
+            <div><%= findPro.description %> <a href="#" style="color: #12284c;"> See
                     More</a></div>
             <hr>
             <div id="ff">
@@ -162,7 +58,7 @@
                     </button>
                 </div>
                 <div></div>
-                <div id="bag"><a href="payment.html">ADD TO BAG &nbsp|&nbsp $60</a></div>
+                <div id="bag"><a href="payment.html">ADD TO BAG &nbsp|&nbsp $<%= findPro.price %></a></div>
             </div>
             <div class="hh">4 interest-free payments of $15.00 with <span class="bold">Klarna</span>.<a href="#"> Learn
                     more</a></div>
@@ -176,8 +72,7 @@
             <ul class="remove-dot">
                 <li>Product Details</li>
                 <ul>
-                    Kiehl's potent retinol serum is formulated with Pure Retinol in a daily-strength micro-dose, along
-                    with Ceramides and Peptide, to promote gentle skin surface turnover for youthful-looking skin.
+                    <%= findPro.details %>
                 </ul>
             </ul>
         </div>
@@ -258,47 +153,12 @@
 
     <hr style="margin-top: 50px;">
 
-    <!-- Footer Start -->
-    <div id="foot">
-        <div id="foot-first">
-            <p>Get Expert Beauty Insight & Offers</p>
-            <input type="email" name="" id="email" placeholder="EMAIL ADDRESS">
-            <button onclick="mailSent()">&rarr;</button>
-            <div>To learn more about how we use your information and your rights, see Privacy Note</div>
-            <div class="copyright">Copyright 2021 bluemercury. All Rights Reserved.</div>
-        </div>
-        <div>
-            <p>BLUEMERCURY</p>
-            <p>Our Company</p>
-            <p>Store Locator</p>
-            <p>Spa Menu</p>
-            <p>Press</p>
-            <p>Careers</p>
-        </div>
-        <div>
-            <p>MY ACCOUNT</p>
-            <p>My Account</p>
-            <p>Blue Rewards</p>
-        </div>
-        <div>
-            <p>CUSTOMER SERVICE</p>
-            <p>Contact Us</p>
-            <p>Help & FAQ</p>
-            <p>Offers</p>
-            <p>Klarna</p>
-        </div>
-        <div>
-            <p>RESOURCES</p>
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Accessibility</p>
-            <p>COVID-19 Updates</p>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <!-- Footer -->
+    <%- include("./partials/footer.ejs") %>
+    <!-- Footer -->
 
 </body>
 </html>
-<script src="js/header.js"></script>
-<script src="js/product_details.js"></script>
-<script src="js/shop.js"></script>
+<script src="/js/header.js"></script>
+<script src="/js/product_details.js"></script>
+<!-- <script src="js/shop.js"></script> -->
