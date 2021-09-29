@@ -8,6 +8,10 @@ const loginController = require("../controller/userlogin.controller.js");
 const productController = require("../controller/product.controller.js");
 const addtocartController = require("../controller/cart.request.controller");
 const homePageController = require("../controller/homepage.controller.js");
+const forgotController = require("../controller/forgot.controller");
+const paymentController = require("../controller/payment2.controller");
+const shippingController = require("../controller/payment.controller");
+
 app.use(express.json());
 app.use(express.urlencoded());
 app.set("view engine", "ejs");
@@ -18,6 +22,11 @@ app.use("/login", loginController);
 app.use("/product", productController);
 app.use("/addtocart", addtocartController);
 app.use("/", homePageController);
+app.use("/forgot", forgotController);
+app.use("/payment", paymentController);
+app.use("/shipping" , shippingController);
+
+
 app.listen(2345, async (req, res) => {
   await connect();
   console.log("Listening on port 2345....");
