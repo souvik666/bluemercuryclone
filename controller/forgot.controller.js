@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const user = require("../models/user.model");
 
+router.get("", async (req, res) => {
+    return res.render("forgot_password")
+})
+
 router.patch("/:email", async (req, res) => {
   let body = req.body.password;
   const myres = await user.findOneAndUpdate(
