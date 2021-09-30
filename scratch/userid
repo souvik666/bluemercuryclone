@@ -1,9 +1,9 @@
 {
-  _id: new ObjectId("6153627e797487a5c7b339cb"),
-  username: 'admin1',
-  email: 'admin1@gmail.com',
-  password: 'admin1',
-  last_name: 'testing2',
+  _id: new ObjectId("6155a4be4aa9fe375c5f9fae"),
+  username: 'pankaj',
+  email: 'pankaj@gmail.com',
+  password: 'pankaj',
+  last_name: 'ganjale',
   cart: [],
   newCart: [],
   __v: 0
