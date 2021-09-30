@@ -16,8 +16,8 @@ router.post("/", async (req, res) => {
   if (myres === null) {
     res.status(404).render("not_found");
   } else {
-    res.render("index");
-    localStorage.setItem("userid", myres);
+    res.redirect("/");
+    localStorage.setItem("userid", myres._id);
     localStorage.setItem("isloggedIn", true);
   }
 });
