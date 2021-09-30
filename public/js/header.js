@@ -9,4 +9,3 @@
 // document.getElementById("img-click").addEventListener("click", function () {
 //     window.location.href = "index.html";
 // })
-

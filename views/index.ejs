@@ -9,7 +9,111 @@
 
   <body onload="slideShow()">
     <!-- Header -->
-    <%- include("./partials/header.ejs") %>
+    <header>
+      <div>
+          <div id="heading_first_row">
+              <div class="heading_one">
+                  <div>
+                      <img src="https://image.flaticon.com/icons/png/128/927/927667.png" /><a href=""
+                          target="_blank"></a>
+                  </div>
+                  <div>STORE & SPA LOCATOR</div>
+              </div>
+              <div class="heading_one">
+                  <div>
+                      <img
+                          src="https://t4.ftcdn.net/jpg/04/41/89/73/240_F_441897335_o5l9z54efVNgBtGnvjMdUVPK2W94k95M.jpg" />
+                  </div>
+                  <div>WISHLIST</div>
+              </div>
+              <div class="heading_one">
+                  <div>
+                      <img src="https://image.flaticon.com/icons/png/128/622/622669.png" />
+                  </div>
+                  <div>SEARCH</div>
+              </div>
+              <div class="heading_one" onclick="window.location.href = 'signup'">
+                  <div>
+                      <img
+                          src="https://static.thenounproject.com/png/3144376-200.png" />
+                  </div>
+                  <div id="show-login"><%= loginStatus %></div>
+                  
+              </div>
+              <div class="heading_one" onclick="window.location.href = 'addtocart'">
+                  <div>
+                      <img src="https://image.flaticon.com/icons/png/128/687/687259.png" />
+                  </div>
+                  <div>BAG</div>
+              </div>
+          </div>
+          <div class="heading_two"><img onclick="window.location.href = '/'"
+                  src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm_36dad4a4-9b14-4ef8-9509-6a593f135aae_416x@2x.png?v=1588538421">
+          </div>
+          <div id="heading_second_row">
+              <div></div>
+              <div class="btn1"><button id="disappear"><a id="shop" class="heading_a">SHOP</a></button></div>
+              <div><a class="heading_a" href="/product">NEW!</a></div>
+              <div><a class="heading_a" href="" target="_blank">BRANDS</a></div>
+              <div><a class="heading_a" href="" target="_blank">EXPLORE</a></div>
+              <div><a class="heading_a" href="" target="_blank">EVENTS</a></div>
+              <div><a class="heading_a" href="" target="_blank">BLUEREWARDS</a></div>
+              <div></div>
+          </div>
+  
+          <!-- Hover Start -->
+          <div id="shop_hover">
+              <div id="first" class="one">
+                  <p><a href="">SKIN CARE</a></p>
+                  <p><a href="">MAKEUP</a></p>
+                  <p><a href="">BATH AND BODY</a></p>
+                  <p><a href="">HAIR</a></p>
+                  <p><a href="">SUN AND TAN</a></p>
+                  <P><a href="">SCENTS & HOME</a></P>
+                  <P><a href="">MEN</a></P>
+                  <P><a href="">GIFTS</a></P>
+              </div>
+              <div id="second" class="two"></div>
+              <div id="third" class="one">
+                  <P>BY CATEGORY</P>
+                  <P><a href="">Shop All</a></P>
+                  <P><a href="">Cleaners</a></P>
+                  <p><a href="">Eye Care</a></p>
+                  <p><a href="">Masks</a></p>
+                  <p><a href="">Sets</a></p>
+                  <p><a href="">Sun Care</a></p>
+                  <p><a href="">Tools & Accessories</a></p>
+              </div>
+              <div id="fourth" class="one">
+                  <p>FEATURED</p>
+                  <p><a href="">Best Seller</a></p>
+                  <p><a href="/product">New Arrivals</a></p>
+                  <p><a href="">Anti-Aging</a></p>
+                  <p><a href="">Antioxidants</a></p>
+                  <p><a href="">Skincare Tools</a></p>
+                  <p><a href="">Supplements</a></p>
+                  <p><a href="">Travel Size</a></p>
+                  <p><a href="">Vitamin C</a></p>
+              </div>
+              <div id="fifth" class="one">
+                  <div>
+                      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/cooling_eye_gel_nav_114x114.jpg?v=1626722614" alt="">
+                      <p><a href="">M-61</a></p>
+                      <p><a href="">Hydraboosyt Cooling Eye Gel</a></p>
+                      <br/>
+                  </div>
+                  <div>
+                      <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/kiehl_s_nav_feature_114x114.jpg?v=1629317112" alt="">
+                      <p><a href="">Kiehl's</a></p>
+                      <spanp><a href="">Retinol daily Microdose Serum</a></span>
+                  </div>
+              </div>
+          </div>
+          <!-- Hover Ends -->
+      </div>
+  </header>
+  <!-- Header Ends Here -->
+  
     <!-- Header  -->
 
     <div id="slider">
@@ -92,7 +196,7 @@
           />
           <p>KIEHL'S SINCE 1851</p>
           <p>
-            <span style="cursor: pointer" onclick="openNav()"
+            <span style="cursor: pointer" 
               >Anti-Aging Rentinol Serum</span
             >
           </p>
