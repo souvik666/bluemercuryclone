@@ -41,3 +41,9 @@
     font-weight: 400;
     /* margin: 10px; */
 }
+#new-main > div:nth-child(5) {
+    font-size: 13px;
+    color: #12284c;
+    font-weight: 400;
+    /* margin: 10px; */
+}
