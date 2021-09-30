@@ -160,7 +160,7 @@ input:focus {
 }
 
 #ff>div:nth-child(1) {
-    flex-basis: 30%;
+    flex-basis: 15%;
     /* background-color: violet; */
     margin-right: 0px;
 }
@@ -173,7 +173,7 @@ input:focus {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 45px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
 }
 
 .hh {
