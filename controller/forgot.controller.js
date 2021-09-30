@@ -7,23 +7,22 @@ router.get("", async (req, res) => {
   return res.render("forgot_password")
 })
 
-// ------------------
-// router.post("", async(req,res) => {
-//   const el = await 
-// })
 
-// ------------------
-
-router.patch("/:email", async (req, res) => {
-  console.log("hello");
+router.post("", async (req, res) => {
+  // console.log("hello");
   let body = req.body.password;
   
   const myres = await user.findOneAndUpdate(
-    req.params.email,
+    { email: req.body.email},
     { password: body },
     { new: true }
   );
-  return res.render("login");
+  if (myres === null) {
+    return res.render("create_one.ejs");
+  }
+  else {
+    return res.render("sign_in.ejs");
+  }
 });
 
 module.exports = router;
