@@ -24,17 +24,31 @@
     <hr style="width: 70%; margin: auto;">
 
     <div id="cart-products">
-        <!-- <div id="head-id">
-            <div>Ready to Ship</div>
-            <div>Product</div>
-            <div>Price</div>
-            <div>Quantity</div>
-            <div>Total</div>
-        </div> -->
+        <% let i = 0 %>
+        <% let total = 0 %>
+        <% prodsArr.forEach(function (item) { %>
+        <div id="main<% i %>">
+            <div id="divf<% i %>"><img src="<%= item.image %>" alt=""></div>
+            <div id="divs<% i %>">
+                <p><%= item.brand %></p>
+                <p><%= item.name %></p>
+            </div>
+            <div id="divt<% i %>">$<%= item.price %></div>
+            <div id="divfo<% i %>">
+                <button onclick="minus(divfo<% i %>)">-</button>
+                <p><%= quantityArr[i] %></p>
+                <button onclick="plus(divfo<% i %>)">+</button>
+            </div>
+            <div class="get-total">$<%= quantityArr[i] * item.price %></div>
+            <% total += (quantityArr[i] * item.price) %>
+        </div>
+        <hr style="width: 70%; margin: auto;">
+        <% i++ %>
+        <% }) %>
     </div>
 
     <div class="subtotal">
-        <p style="color: rgba(18, 40, 76, 0.8); font-size: 16px; padding-right: 10px;">0</p>
+        <p style="color: rgba(18, 40, 76, 0.8); font-size: 16px; padding-right: 10px;">$<%= total %></p>
         <p style="padding-right: 10px; color: #12284c; font-size: 16px;">Subtotal</p>
     </div>
 
