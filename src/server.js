@@ -1,5 +1,11 @@
 const express = require("express");
 const connect = require("./configs/db");
+// flash msg ----------
+// const session = require('express-session');
+// const path = require('path');
+// const {flash} = require('express-flash-message');
+// const flash = require('connect-flash');
+// flash msg ----------
 
 const app = express();
 //controllers
@@ -18,6 +24,12 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.set("view engine", "ejs");
 app.use(express.static("./public"));
+
+// flash message express session----------
+// app.use(session({secret: 'successfull', resave: false, saveUninitialized: true}));
+// apply express-flash-message middleware
+// app.use(flash());
+// ---------------------------------------
 
 app.use("/signup", userController);
 app.use("/login", loginController);
