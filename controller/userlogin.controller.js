@@ -5,8 +5,8 @@ const { LocalStorage } = require("node-localstorage");
 var localStorage = new LocalStorage("./scratch");
 
 router.get("", async (req, res) => {
-  return res.render("sign_in.ejs")
-})
+  return res.render("sign_in.ejs");
+});
 
 /* make a login request */
 router.post("/", async (req, res) => {
@@ -26,5 +26,6 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   res.render("sign_in", {});
 });
-
+let tst = localStorage.getItem("isloggedIn");
+console.log(tst)
 module.exports = router;
