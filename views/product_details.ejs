@@ -49,16 +49,16 @@
             <hr>
             <div id="ff">
                 <div class="quantity">
-                    <button class="minus-btn" type="button" name="button" onclick="remove()">
+                    <!-- <button class="minus-btn" type="button" name="button" onclick="remove()">
                         <img src="https://image.flaticon.com/icons/png/128/339/339879.png" alt="" />
-                    </button>
-                    <input type="text" name="name" value="1">
+                    </button> -->
+                    <!-- <input type="text" name="name" value="1">
                     <button class="plus-btn" type="button" name="button" onclick="add()">
                         <img src="https://image.flaticon.com/icons/png/128/864/864380.png" alt="" />
-                    </button>
+                    </button> -->
                 </div>
                 <div></div>
-                <div id="bag"><a href="payment.html">ADD TO BAG &nbsp|&nbsp $<%= findPro.price %></a></div>
+                <div id="bag"><a href="/addtocart/<%= loggedUser %>/<%= findPro._id %>">ADD TO BAG &nbsp|&nbsp $<%= findPro.price %></a></div>
             </div>
             <div class="hh">4 interest-free payments of $15.00 with <span class="bold">Klarna</span>.<a href="#"> Learn
                     more</a></div>
