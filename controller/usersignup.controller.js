@@ -10,7 +10,7 @@ router.get("", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const newUSer = await userSchema.create(req.body);
-    res.render("index");
+    res.render("sign_in");
   } catch (error) {
     res.render("create_one");
   }
