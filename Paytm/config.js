@@ -1,6 +1,6 @@
 var PaytmConfig = {
-    mid: "EZBUjL54110037426731",
-    key: "K86tPO63M08&05yg",
+    mid: "",
+    key: "",
     website: "DEFAULT",
   };
   module.exports.PaytmConfig = PaytmConfig;
