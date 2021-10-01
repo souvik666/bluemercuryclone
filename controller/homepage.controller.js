@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
   if (isLogged === "true") {
     loginStatus = "LOGOUT";
   } else {
-    loginStatus = "SIGN IN/UP";
+    loginStatus = "SIGN UP/IN";
   }
   
   res.render("index", {
