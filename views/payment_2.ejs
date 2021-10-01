@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <%- include("./partials/head.ejs", {title: "Payment"}) %>
-    <link rel="stylesheet" href="css/payment_2.css">
+    <link rel="stylesheet" href="/css/payment_2.css">
 </head>
 <body>
     <div id="main">
         
         
-        <form onsubmit="payMoney(event)">
+        <form method="post" action="/paytm/verify" >
             <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/blm-checkout-logo.png?65084" alt="" id="head-img">
             <p>All transactions are secure and encrypted</p>
             <div class="flex">
@@ -21,15 +21,16 @@
                 </div>
             </div>
             <hr style="width: 100%;">
-            <input type="text" placeholder="Card Number" id="cardno">
-            <input type="text" placeholder="Name on Card" id="cardname">
-            <input type="text" placeholder="Expiration Date (MM / YY)" id="expiry">
-            <input type="text" placeholder="Security Code" id="code">
-            <div id="submit-btn"><button >COMPLETE ORDER</button></div>
-            <div id="paypal"><button><img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/offsite-gateway-logos/paypal@2x-768388b0667bef1aa9a7cf02fa1cc2184c2915a90d4cdd62dde223f74f2acbfc.png" alt=""></button></div>
+            <input type="text" placeholder="Card Number" id="cardno" name="number" >
+            <input type="text" placeholder="Name on Card" id="cardname" name="name" >
+            <input type="text" placeholder="Expiration Date (MM / YY)" id="expiry" name="expiry" >
+            <input type="text" placeholder="Security Code" id="code" name="code" >
+            <div id="submit-btn"><input type="submit" value="SUBMIT" ></div>
         </form>
+        <div id="paypal"><button><img src="https://cdn.shopify.com/shopifycloud/shopify/assets/checkout/offsite-gateway-logos/paypal@2x-768388b0667bef1aa9a7cf02fa1cc2184c2915a90d4cdd62dde223f74f2acbfc.png" alt=""></button></div>
+        <div id="paypal"><button onclick="window.location.href = '/paytm'"><img src="https://assetscdn1.paytm.com/frontendcommonweb/11272962.svg" alt=""></button></div>
     </div>
 
 </body>
 </html>
-<script src="js/form.js"></script>
+<!-- <script src="js/form.js"></script> -->
