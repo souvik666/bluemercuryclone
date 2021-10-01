@@ -308,4 +308,13 @@ button {
     text-align: right;
 }
 
+#bm-img {
+    width: 80%;
+    margin: auto;
+}
+
+#bm-img > img {
+    width: 100%;
+    margin: 50px auto;
+}
 

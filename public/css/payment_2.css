@@ -49,7 +49,7 @@ input:hover {
 input::placeholder {
     padding-left: 15px;
 }
-#submit-btn button {
+#submit-btn input {
     height: 35px;
     width: 60%;
     margin-left: 20%;
@@ -62,9 +62,7 @@ input::placeholder {
 }
 #paypal button {
     height: 50px;
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: #ebe175;
