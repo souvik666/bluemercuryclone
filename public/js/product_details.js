@@ -1,23 +1,3 @@
-// function add() {
-//     var d = document.querySelector("input");
-//     var c = d.value;
-//     d.innerHTML = null;
-//     input = Number(c);
-//     input++;
-//     d.value = input;
-// }
-// function remove() {
-//     var d = document.querySelector("input");
-//     var c = d.value;
-//     d.innerHTML = null;
-//     input = Number(c);
-//     if (input === 1) {
-//         input = c;
-//     } else {
-//         input--;
-//     }
-//     d.value = input;
-// }
 
 var slideLeft = 1;
 var slideRight = 4;
