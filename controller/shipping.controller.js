@@ -11,7 +11,7 @@ router.get("/:amount", async (req, res) => {
 router.post("/promo/:amount", async (req, res) => {
     let amount = +req.params.amount;
     if (req.body.box === "blue30") {
-        amount = (amount / 100) * 70;
+        amount = (amount / 100) * 70 | 0;
         return res.render("payment.ejs", {
             amount
         });
