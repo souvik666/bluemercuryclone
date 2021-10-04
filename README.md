@@ -97,6 +97,5 @@ Users can pay money by filling card details or users can also use paytm payment 
 
 
 ## Output of Project:- 
-1. [Video Presentation](https://drive.google.com/file/d/1MpkHS77w3Kb4EOGvIW_RbpEDHSq9_WC_/view?usp=sharing)
-2. [GitHub Deployment](https://pankajganjale.github.io/bluemercury/)
+[Video Presentation](https://drive.google.com/file/d/1pv5OZXH-SpsIjxmNenWY0Y-yY8un0TVg/view?usp=sharing)
 
