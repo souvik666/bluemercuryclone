@@ -35,11 +35,7 @@
 6. MongoDB
 7. Embedded Javascript (EJS)
    
-## Contact
 
-Souvik Dutta - [My Linkedin]([https://linkedin.com/in/pankajganjale](https://www.linkedin.com/in/souvik-dutta-0913631a1/))
-
-Project Link - [Project Repo](https://github.com/pankajganjale/bluemercuryclone.git)
 
 ## Acknowledgment
 Took some help from these resources 
